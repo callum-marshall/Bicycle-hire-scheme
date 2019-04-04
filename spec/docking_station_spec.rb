@@ -13,7 +13,9 @@ describe DockingStation do
     expect(subject.dock(bike)).to eq bike
   end
 
-
+  it "raises error when no bikes available" do
+    expect { subject.release_bike }.to raise_error
+  end
   # it "bike exists in docking station" do
   #    expect bike to exist in docking station
   # end
